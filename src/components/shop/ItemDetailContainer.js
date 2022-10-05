@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import Colores from './Colores'
 import { products } from './data/products'
 
 const ItemDetailContainer = () => { /* detalles de los productos
@@ -32,7 +31,6 @@ return new Promise((resolve, reject) => {
     <div className='m-8'>
         <div>{item.title}</div>
         <div>Price:{item.price}</div>
-        <Colores></Colores>
         </div>
 
 

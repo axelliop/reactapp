@@ -15,10 +15,10 @@ const ItemListContainer = () => {
     const {categoriaId} = useParams(); /*  useparams para filtrar por categoria */
 
 useEffect(() => { /* se va a ejecutar solo en el montaje */
-getProducts()
+getProducts() /* then y catch dentro del useEffect */
 .then((response) => {
         if(categoriaId){
-            setItems(
+            setItems( /* si responde me filtra */
                  response.filter((item) => item.category === categoriaId )
             );
         } else {
@@ -30,7 +30,7 @@ getProducts()
 }, [categoriaId])
 
 const getProducts = () => {
-    return new Promise((resolve) => {
+    return new Promise((resolve) => { /* la promesa para que lo capture */
         setTimeout(() => {
             resolve(products) /* resuelvo la promesa y mando products aca cuando la resuelvo */
         }, 2000);

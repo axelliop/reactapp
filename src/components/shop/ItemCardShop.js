@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { products } from './data/products'
+
 
 const ItemCardShop = ({id, title, price}) => {
   return (
@@ -18,5 +20,5 @@ const ItemCardShop = ({id, title, price}) => {
   )
 }
 
-import { products } from './data/products'
+
 export default ItemCardShop
